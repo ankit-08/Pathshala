@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "open sans", sans-serif;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  transition: background-color 0.5s ease;
+}
+.logo {
+  width: 30%;
+  color: #dde8f0;
+  display: flex;
+  float: left;
+  padding-left: 20px;
+}
+.nav-menu {
+  width: 70%;
+  display: flex;
+  margin-right: 0;
+  cursor: default;
+  align-items: center;
+  justify-content: flex-end;
+  font-family: sans-serif;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+.nav-menu u {
+  margin-right: 0;
+}
+.nav-menu li {
+  display: inline-block;
+  margin-right: 15px;
+}
+.nav-menu ul li a {
+  text-decoration: none;
+  color: #dde8f0;
+  font-size: 1.2rem;
+  padding-bottom: 0;
+}
+.nav-menu li a:hover {
+  color: #97cbdc;
+  display: block;
+}
+.nav-menu ul li ul {
+  position: absolute;
+  display: none;
+  width: auto;
+}
+
+.nav-menu ul li ul li a {
+  width: 100%;
+  border-bottom: 1px solid white;
+  text-align: left;
+}
+.nav-menu ul li:hover > ul {
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+  /* background-color: #081723; */
+}
+.nav-menu ul li ul li a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #dde8f0;
+  font-size: 1.3rem;
+  padding: 5px 0 2px 5px;
+}
+#toggle-btn {
+  text-align: right;
+  display: none;
+}
+#toggle-btn i {
+  font-size: 25px;
+  /* background: rgba(0, 0, 0, 0.3); */
+  padding: 4px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./backround.jpg") no-repeat fixed bottom/cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 200px;
+}
+.hero h1 {
+  color: #fff;
+  font-size: 60px;
+  line-height: 1;
+}
+.hero h3 {
+  color: #fff;
+  font-size: 26px;
+  font-weight: normal;
+  margin: 15px 0;
+}
+.hero a {
+  background: #cc0000;
+  color: #dde8f0;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-radius: 3px;
+  line-height: 1;
+  padding: 10px 18px;
+}
+
+.active {
+  background: rgba(0, 0, 0, 0.3);
+}
+.active a:hover {
+  color: #fff !important;
+}
+/* responsive media queries */
+@media screen and (max-width: 768px) and (min-width: 10px) {
+  .nav-menu ul {
+    display: none;
+  }
+  .logo {
+    display: inline-block;
+  }
+  #toggle-btn {
+    display: block;
+  }
+  #toggle:checked + ul {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+}
